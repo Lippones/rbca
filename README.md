@@ -2,6 +2,8 @@
 
 This project contains all the necessary boilerplate to setup a multi-tenant SaaS with Next.js including authentication and RBAC authorization.
 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4Y2Y5NGI3Ny1mZGU1LTQyYjAtYjczYS1lZTdjM2U5ODM5NzIiLCJpYXQiOjE3MjQ5NTk3NTAsImV4cCI6MTcyNTU2NDU1MH0.B9QR6-2KOHLxUhzeH0ogSuLV1e0XugKXinGsoog7PT8
+
 ## Features
 
 ### Authentication
