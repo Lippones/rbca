@@ -14,7 +14,7 @@ datasource db {
 }
 
 model User {
-  id           String   @id @default(cuid())
+  id           String   @id @default(uuid())
   name         String?
   email        String   @unique
   passwordHash String?  @map("password_hash")
@@ -37,7 +37,7 @@ enum TokenType {
 }
 
 model Token {
-  id        String    @id @default(cuid())
+  id        String    @id @default(uuid())
   type      TokenType
   createdAt DateTime  @default(now()) @map("created_at")
 
@@ -52,7 +52,7 @@ enum AccountProvider {
 }
 
 model Account {
-  id                String          @id @default(cuid())
+  id                String          @id @default(uuid())
   provider          AccountProvider
   providerAccountId String          @unique @map("provider_account_id")
   createdAt         DateTime        @default(now()) @map("created_at")
@@ -71,7 +71,7 @@ enum Role {
 }
 
 model Invite {
-  id        String   @id @default(cuid())
+  id        String   @id @default(uuid())
   email     String
   role      Role
   createdAt DateTime @default(now()) @map("created_at")
@@ -88,7 +88,7 @@ model Invite {
 }
 
 model Member {
-  id        String   @id @default(cuid())
+  id        String   @id @default(uuid())
   role      Role     @default(MEMBER)
   createdAt DateTime @default(now()) @map("created_at")
 
@@ -103,7 +103,7 @@ model Member {
 }
 
 model Organization {
-  id                        String   @id @default(cuid())
+  id                        String   @id @default(uuid())
   name                      String
   slug                      String   @unique
   domain                    String?  @unique
@@ -123,7 +123,7 @@ model Organization {
 }
 
 model Projects {
-  id          String   @id @default(cuid())
+  id          String   @id @default(uuid())
   name        String
   description String
   slug        String   @unique
